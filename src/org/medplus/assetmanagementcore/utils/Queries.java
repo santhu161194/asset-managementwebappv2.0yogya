@@ -68,7 +68,7 @@ public class Queries {
 	
 	public static String deallocateAsset = "delete from AssetManagement.tbl_asset_mapping where AssetId=?";
 	
-	public static String postNewAssetTypeRequest = "insert into AssetManagement.tbl_asset_request_unavailable values(?,?,?,?)";
+	public static String postNewAssetTypeRequest = "insert into AssetManagement.tbl_asset_request_unavailable values(?,?,?,?,?)";
 	
 	public static String getNewAssetTypeRequest = "select EmployeeId,AssetType,AssetName,RequestDate from AssetManagement.tbl_asset_request_unavailable ";
 	

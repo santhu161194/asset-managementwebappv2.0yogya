@@ -423,6 +423,7 @@ public class AssetDaoImpl implements AssetDao {
 						pst.setString(2, assetType);
 						pst.setString(3, assetName);
 						pst.setDate(4, new java.sql.Date(new Date().getTime()));
+						pst.setString(5, "-");
 
 					}
 				});
@@ -519,7 +520,7 @@ public class AssetDaoImpl implements AssetDao {
 	
 	@Override
 	public int addAssetType(final String assetType) {
-		int resultCount = template.update("",/*Queries.addAssetType,*/
+		int resultCount = template.update(Queries.addAssetType,
 				new PreparedStatementSetter() {
 					public void setValues(PreparedStatement pst)
 							throws SQLException {
@@ -558,7 +559,7 @@ public class AssetDaoImpl implements AssetDao {
 						request.setAssetName(rs.getString(3));
 						request.setRequestDate(new java.util.Date(rs.getDate(4)
 								.getTime()));
-
+                        request.setRemark(rs.getString(5));
 						return request;
 
 					}
@@ -626,7 +627,7 @@ public class AssetDaoImpl implements AssetDao {
 						pst.setString(3, assettype);
 					}
 				});
-		
+	
 	return resultCount;
 	}
 }

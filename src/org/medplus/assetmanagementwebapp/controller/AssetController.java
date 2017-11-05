@@ -512,6 +512,8 @@ public ModelAndView viewAssetsForm() {
 	{
 		System.out.println("aaa");
         int count=assetService.updateNewRemark(reason, requestedby, assettype);
+		System.out.println("aaab");
+
 		ModelAndView mav = new ModelAndView("EDPHome");
 		return mav;
 	}

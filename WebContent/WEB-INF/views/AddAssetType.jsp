@@ -33,7 +33,7 @@ span {
 		<table align="center">
 			
 			<tr>
-				<td>AssetTypeName</td>
+				<td>Enter AssetType Name:</td>
 				<td><input type="text" name="AssetTypeName" id="AssetTypeName" required="true">
 	</td>
 			</tr>
